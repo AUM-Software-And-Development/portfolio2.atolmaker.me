@@ -1,0 +1,68 @@
+﻿@model IEnumerable<EricDeeTTSTS.Models.StringCommand>
+
+<!-- 2-5-2021
+Author: Eric Dee
+http://EricDeeTTSTS.com/ -->
+
+<head>
+    <title>Portfolio2 - Instruction History</title>
+    <link href="~/css/boot.css" rel="stylesheet" runat="server" />
+</head>
+
+<body>
+
+    <header>
+        <meta charset="uft-8" />
+        <meta name="author" content="Eric Dee">
+        <meta name="description" content="Instructions people have entered.">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </header>
+
+    <div class="TopNavigationLink">
+
+        <p class="Centered"><a class="TopSideIndexLinks" asp-area="" asp-controller="Home" asp-action="Index">&#8767</a></p>
+
+    </div>
+
+    <div class="AlignTable">
+
+        <div class="FooterCalculator">
+
+            <div class="BelowNavigation Table">
+
+                <table class="CommandWall">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Command)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Command)
+                                </td>
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                    <a asp-action="Delete" asp-route-id="@item.Id">Remove</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+                <div id="StickyNavigationRight">
+                    <a class="UnstyledLink SmallText" href="http://portfolio2.atolmaker.me">Return home</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>

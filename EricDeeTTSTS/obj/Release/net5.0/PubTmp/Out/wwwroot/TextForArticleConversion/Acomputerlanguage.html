@@ -1,0 +1,117 @@
+﻿<head>
+    <link href="../css/boot.css" rel="stylesheet" runat="server" />
+</head>
+
+<body id="Articles">
+
+    <header>
+        <meta charset="uft-8" />
+        <meta name="author" content="Eric Dee">
+        <meta name="description" content="Languages.">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </header>
+
+    <div class="TopNavigationLink">
+
+        <p class="Centered"><a class="TopSideIndexLinks" href="http://portfolio2.atolmaker.me">&#8767</a></p>
+
+    </div>
+
+    <div class="TopNavigationLinkArticles">
+
+        <p class="Centered"><a class="TopSideIndexLinksArticles" href="http://portfolio2.atolmaker.me">&#8767</a></p>
+
+    </div>
+
+    <div id="StickyNavigationAllArticles">
+        <a class="UnstyledLink SmallText" href="#LanguageDev1">Design your own language part 1</a> <br />
+        <a class="UnstyledLink SmallText" href="#LanguageDev2">Design your own language part 2</a> <br />
+        <a class="UnstyledLink SmallText" href="#LanguageDev3">Design your own language part 3</a> <br /> <br />
+        <a class="UnstyledLink SmallText" href="#Articles">Back to top</a> <br /> <br /><br /><br /><br />
+        <a class="UnstyledLink SmallText" href="http://portfolio2.atolmaker.me">Return home</a> <br />
+    </div>
+
+    <div class="Articles">
+
+        <article id="LanguageDev3">
+            <h3 class="Index"><u class="Index">Beginning objective conversion (part 3)</u></h3>
+            <p>
+                <time class="Dated" datetime="2021-01-17" title="2021-01-17" style="font-size: .66rem; padding: 3px;"><i>January 17, 2021</i></time>
+            </p>
+
+            <p>
+                Since the interpreter is written and working properly with exit functions, it's time for a
+                more mathematical approach. In this article, I discuss how to determine instruction keywords using decimal values to deduce ASCII character strings.
+            </p> <br />
+
+            <p>
+                I remove all signaled ("") character logic checks, and replace methods with decimal counters. The computer needs to take an input, then it
+                has to insert the string into memory. The most crucial part to this is that the writer must replace all visual characters with decimal counterparts.
+                In so doing, all letters can be added as numbers. At this stage, a paragraph can be represented as a sum. With this sum, you can subtract user definitions,
+                AKA instructions; to get whether a sentence exists, and whether that sentence makes any sense.
+            </p> <br />
+
+            <p>
+                It's really that simple. If you look at the images, you can see that all that is left to do is define your own instructions by declaring key value pair
+                dictionaries. For example, 619 = the sentence "To blue". From here, you can do whatever you want. You just need to implement methods to check for character
+                ordering for some fringe use cases where properly arranged sentences might add up to the same number. Be sure to stay tuned for more information.
+            </p> <br />
+
+            <p>
+                <script src="https://gist.github.com/atolbmaker/4737f3dcdf84ac6a86b7baf9ab33dc84.js"></script>
+            </p>
+
+            <p>
+                <script src="https://gist.github.com/atolbmaker/81297017446a46a745e6e95ff70b42d4.js"></script>
+            </p>
+
+            <p>
+                <script src="https://gist.github.com/atolbmaker/75860b4dda2325aa8a219941ef6d02c5.js"></script>
+            </p>
+
+            <p>
+                <script src="https://gist.github.com/atolbmaker/31a3c89762e4265e2cc009125aec2b61.js"></script>
+            </p>
+
+        </article>
+
+        <article id="LanguageDev2">
+            <h3><u class="Index">Lexer improvements (part 2)</u></h3>
+            <p>
+                <time class="Dated" datetime="2021-01-13" title="2021-01-13" style="font-size: .66rem; padding: 3px;"><i>January 13, 2021</i></time>
+            </p>
+
+            <p>
+                I saw someone entered a command ",Get resume.". It caused the lexical analyzer to fail!
+            </p> <br />
+
+            <p>
+                What did I do to fix it? It took some thinking, especially since this lexer is a pre-dated version. There's just so much to do and I have to be smart
+                with my focus; so the fix was this; add emergency exits, and provide the lexer with a "smart" detection system.
+            </p> <br />
+
+            <p>
+                By using decimal values instead of ASCII visual characters, the lexer now just checks if the number is equal to a letter representation, and if it does
+                tries to read it. There is a lookahead to take into account, which causes this thing to be a very powerful switch mechanism. It does an awesome job at deducing
+                instructions regardless of their order, and terminating; but it doesn't do as well of a job at "being humanized", so if it doesn't find something it knows, it gets
+                caught in a forever loop. The fix to that, is to program it to always quit if it ever gets caught, or "confused". Now it's just about 100% reliable.
+            </p> <br />
+
+        </article>
+
+        <article id="LanguageDev1">
+            <h3><u class="Index">Base before objective convesion (part 1)</u></h3>
+            <p>
+                <time class="Dated" datetime="2021-01-09" title="2021-01-09" style="font-size: .66rem; padding: 3px;"><i>January 09, 2021</i></time>
+            </p>
+
+            <p>
+                This article is now outdated an no longer available.
+            </p> <br />
+
+        </article>
+
+    </div>
+
+</body>

@@ -1,0 +1,33 @@
+﻿<title>Portfolio2 - Privacy</title>
+<script src="/js/CommandLine.js"></script>
+<script src="~/js/Interpreter.js"></script>
+<link href="~/css/boot.css" rel="stylesheet" runat="server" />
+
+<datalist id="Instructions">
+    <option value="go index" />
+    <option value="go projects" />
+    <option value="view history" />
+    <option value="view roadmap" />
+    <option value="view sourcecode" />
+    <option value="reset" />
+</datalist>
+
+<body onload="PrintCommandConsoles(1)">
+
+    <div class="TopNavigationLink">
+
+        <p class="Centered"><a class="TopSideIndexLinks" asp-area="" asp-controller="Home" asp-action="Index">&#8767</a></p>
+
+    </div>
+
+    <header>
+        <meta charset="uft-8" />
+        <meta name="author" content="Eric Dee">
+        <meta name="description" content="Your information.">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </header>
+
+    <p class="ParagraphPrivacy">Nothing to state. This portfolio only stores commands.</p>
+
+</body>
